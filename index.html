@@ -18,11 +18,11 @@
         <div class="navbar">
           <i class="bx bx-menu"></i>
           <div class="logo">
-            <img src="./assets/logo.svg" width="200px" alt="" />
+            <img src="./assets/logo.svg" width="300px" alt="" />
           </div>
           <div class="nav-links">
             <div class="sidebar-logo">
-              <span class="logo-name">CodingLab</span>
+              <span class="logo-name"> <img src="./assets/logo.svg" width="100px" alt="" /></span>
               <i class="bx bx-x"></i>
             </div>
             <ul class="links">
@@ -146,42 +146,82 @@
     <section id="contact">
       <img src="./assets/background-mini.svg" width="1690px" alt="" />
 
-      <div class="contact-content">
+      <div class="contact-row">
         <h2>Contact</h2>
-        <form
-          target="_blank"
-          action="https://formsubmit.co/f372b075a582ae3648e13e40d8e2c9e6"
-          method="POST"
-        >
-          <div class="col">
-            <input
-              type="text"
-              name="name"
-              class="form-control"
-              placeholder="Nama"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              class="form-control"
-              placeholder="Email"
-              required
-            />
-          </div>
+        <div class="contact-content">
+          <img src="./assets/man.svg" width="300px" alt="man">
+          <form
+            target="_blank"
+            action="https://formsubmit.co/f372b075a582ae3648e13e40d8e2c9e6"
+            method="POST"
+          >
+            <div class="col">
+              <input
+                type="text"
+                name="name"
+                class="form-control"
+                placeholder="Nama"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                placeholder="Email"
+                required
+              />
+            </div>
+  
+            <div id="textarea">
+              <textarea
+                placeholder="Your Message"
+                class="form-control"
+                name="message"
+                rows="10"
+                required
+              ></textarea>
+            </div>
+  
+            <button type="submit" class="submit-btn">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
 
-          <div id="textarea">
-            <textarea
-              placeholder="Your Message"
-              class="form-control"
-              name="message"
-              rows="10"
-              required
-            ></textarea>
-          </div>
-
-          <button type="submit" class="submit-btn">Send</button>
-        </form>
+    <section class="footer">
+      <img src="./assets/logo.svg" width="300px" alt="logo">
+      <div class="footer-content">
+        <div class="footer-row">
+          <h3>Resource</h3>
+        <ul>
+          <li><a href="#">Aplication</a></li>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">System</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+        
+        </div>
+        <div class="footer-row">
+          <h3>Resource</h3>
+        <ul>
+          <li><a href="#">Aplication</a></li>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">System</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+        
+        </div>
+        <div class="footer-row">
+          <h3>Resource</h3>
+        <ul>
+          <li><a href="#">Aplication</a></li>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">System</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+        
+        </div>
+        
       </div>
     </section>
     <script src="script.js"></script>
