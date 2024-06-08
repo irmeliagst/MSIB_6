@@ -1,8 +1,8 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
-import "./component/footer-component.js";
-
-
+import '../styles/responsive.css';
+import './component/footer-component.js';
+import './component/main.js';
 
 // document.addEventListener("DOMContentLoaded", async () => {
 //   const jsonData = await import('../DATA.json');
