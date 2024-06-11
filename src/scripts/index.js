@@ -3,7 +3,7 @@ import '../styles/main.css';
 import '../styles/responsive.css';
 import '../styles/responsivehp.css';
 import '../styles/map.css';
-import "./component/footer-component.js";
+import './component/main';
 
 
 
