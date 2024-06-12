@@ -1,11 +1,7 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
-import '../styles/responsive.css';
-import '../styles/responsivehp.css';
 import '../styles/map.css';
-import './component/main';
-
-
+import '../styles/output.css';
 
 // document.addEventListener("DOMContentLoaded", async () => {
 //   const jsonData = await import('../DATA.json');
@@ -34,18 +30,18 @@ import './component/main';
 // });
  
 
-let navbar = document.querySelector(".navbar");
+// let navbar = document.querySelector(".navbar");
 
-// sidebar open close js code
-let navLinks = document.querySelector(".nav-links");
-let menuOpenBtn = document.querySelector(".navbar .bx-menu");
-let menuCloseBtn = document.querySelector(".nav-links .bx-x");
-menuOpenBtn.onclick = function() {
-navLinks.style.left = "0";
-}
-menuCloseBtn.onclick = function() {
-navLinks.style.left = "-100%";
-}
+// // sidebar open close js code
+// let navLinks = document.querySelector(".nav-links");
+// let menuOpenBtn = document.querySelector(".navbar .bx-menu");
+// let menuCloseBtn = document.querySelector(".nav-links .bx-x");
+// menuOpenBtn.onclick = function() {
+// navLinks.style.left = "0";
+// }
+// menuCloseBtn.onclick = function() {
+// navLinks.style.left = "-100%";
+// }
 
 
 // sidebar submenu open close js code
