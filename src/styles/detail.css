@@ -1,0 +1,153 @@
+/* Reset default margin and padding */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #135d66;
+}
+
+.detail-container {
+  padding: 50px;
+  width: 1000px;
+  margin: 0 auto; /* Center the container */
+}
+
+.row-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.detail-content {
+ background-color: #fff;
+ border-radius: 20px;
+ height: 554px;
+ overflow: auto;
+ padding: 20px;
+}
+.detail-content, .review-content {
+  flex: 1; /* Ensure both take equal space */
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.detail-content h2,
+.detail-content h3 {
+  margin: 10px 0;
+}
+
+p {
+  text-align: justify;
+}
+
+.review-content {
+ background-color: #fff;
+ padding: 20px;
+ border-radius: 20px;
+ height: 554px;
+ overflow: auto; 
+ gap: 10px; /* Optional: Add some gap between review columns if needed */
+}
+
+.col {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: 
+    "image name"
+    "image comment";
+  gap: 7px;
+  align-items: center;
+  border-radius: 30px;
+  padding: 6px;
+}
+
+.col img {
+  grid-area: image;
+  height: 50px;
+}
+.star-flex img {
+  width: 100px;
+  height: 20px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.text-container h3 {
+  margin: 0;
+}
+
+.text-container p {
+  margin: 0;
+}
+
+.add-comment {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+
+}
+
+.comment-content {
+  display: flex;
+  gap: 10px;
+}
+
+.comment-content input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.comment-content button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comment-content button:hover {
+  background-color: #0056b3;
+}
+
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+.star-rating > .star-img{
+width: 0px;
+}
+
+.star {
+  font-size: 2rem;
+  color: rgba(160, 151, 151, 0.733);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.star:hover, .star:hover ~ .star {
+  color: gold;
+}
+
+.star.selected, .star.selected ~ .star {
+  color: gold;
+}
