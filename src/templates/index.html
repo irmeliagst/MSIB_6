@@ -23,27 +23,8 @@
 
 <body>
 
-  <header style="background: url('../public/images/background.svg');"
-    class="flex flex-col md:flex-row items-center justify-around w-full h-28 p-4">
-
-    <div class="w-full md:w-auto flex justify-between items-center">
-      <img src="../public/images/logo.svg" alt="Logo" class="w-40 md:w-64 bg-cover bg-center bg-fixed">
-      <button id="menu-btn" class="block md:hidden text-white">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-      </button>
-    </div>
-
-    <nav id="menu" class="hidden md:block">
-      <ul class="flex flex-col md:flex-row md:space-x-10 text-xl space-y-4 md:space-y-0 mt-4 md:mt-0">
-        <li><a href="#" class="nav-link text-white">Home</a></li>
-        <li><a href="#" class="nav-link text-white">Features</a></li>
-        <li><a href="#" class="nav-link text-white">About Us</a></li>
-        <li><a href="#" class="nav-link text-white">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- Navbar -->
+  <navbar-element></navbar-element>
 
   <!-- Jumbotron -->
   <section class="bg-cover bg-center flex flex-col md:flex-row items-center justify-center p-6"
@@ -51,7 +32,8 @@
     <div class="md:w-1/2 max-w-md lg:max-w-lg xl:max-w-2xl text-center md:text-left m-3 text-white space-y-4">
       <p class="text-lg font-semibold">Destinasi terbaik di sekitar bali !</p>
       <h1 class="text-3xl md:text-4xl font-bold">Checklist impian, lengkapi destinasi yang pernah dikunjungi</h1>
-      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">Coba
+      <button id="goToMap"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">Coba
         Sekarang</button>
     </div>
 
@@ -90,45 +72,70 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <section class="footer text-white py-12" style="background: url('../public/images/background-mini.svg');">
-    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
-      <img src="../public/images/logo.svg" width="300px" alt="logo" class="mb-8 md:mb-0">
+  <!-- 3 Step -->
+  <section class="bg-cover bg-center py-12" style="background: url('../public/images/background-mini.svg');">
+    <div class="container mx-auto px-8">
+      <!-- Header Section -->
+      <div class="text-center mb-8">
+        <p class="text-lg font-semibold text-white mb-2">Easy and Fast</p>
+        <h1 class="text-3xl md:text-4xl font-bold text-white">3 Langkah Mudah Melengkapi Destinasimu</h1>
+      </div>
 
+      <!-- Steps Section -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="footer-row">
-          <h3 class="text-lg font-semibold mb-4">Resources</h3>
-          <ul>
-            <li><a href="#" class="text-gray-400 hover:text-white">Application</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Documentation</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">System</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
-          </ul>
+        <div class="flex flex-col items-center">
+          <div class="bg-white p-6 rounded-lg shadow-md cursor-pointer">
+            <img src="../public/images/tiny-image5.png" alt="" class="w-20 h-20 md:w-24 md:h-24 mx-auto mb-4">
+            <h2 class="text-xl font-semibold text-center mb-2">Langkah 1</h2>
+            <p class="text-center text-gray-700">Deskripsi langkah 1 yang menarik dan informatif.</p>
+          </div>
         </div>
-
-        <div class="footer-row">
-          <h3 class="text-lg font-semibold mb-4">Resources</h3>
-          <ul>
-            <li><a href="#" class="text-gray-400 hover:text-white">Application</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Documentation</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">System</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
-          </ul>
+        <div class="flex flex-col items-center">
+          <div class="bg-white p-6 rounded-lg shadow-md cursor-pointer">
+            <img src="../public/images/tiny-image6.png" alt="" class="w-20 h-20 md:w-24 md:h-24 mx-auto mb-4">
+            <h2 class="text-xl font-semibold text-center mb-2">Langkah 2</h2>
+            <p class="text-center text-gray-700">Deskripsi langkah 2 yang menarik dan informatif.</p>
+          </div>
         </div>
-
-        <div class="footer-row">
-          <h3 class="text-lg font-semibold mb-4">Resources</h3>
-          <ul>
-            <li><a href="#" class="text-gray-400 hover:text-white">Application</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Documentation</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">System</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
-          </ul>
+        <div class="flex flex-col items-center">
+          <div class="bg-white p-6 rounded-lg shadow-md cursor-pointer">
+            <img src="../public/images/tiny-image7.png" alt="" class="w-20 h-20 md:w-24 md:h-24 mx-auto mb-4">
+            <h2 class="text-xl font-semibold text-center mb-2">Langkah 3</h2>
+            <p class="text-center text-gray-700">Deskripsi langkah 3 yang menarik dan informatif.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  
+
+  <!-- Riview -->
+  <section class="review min-h-96 bg-cover bg-center" style="background: url('../public/images/background-mini.svg');">
+    <div class="flex items-center justify-around h-full p-8">
+      <div class="mb-4 flex flex-col mt-10">
+        <h3 class="text-xl font-semibold text-white">About Us</h3>
+        <div class="flex items-center mt-4">
+          <h1 class="text-4xl font-bold text-white">Apa yang kau tahu tentang</h1>
+        </div>
+        <div class="">
+          <img src="../public/images/logo.svg" alt="Logo" class="inline-block w-100 h-12 ml-3 align-middle">
+        </div>
+      </div>
+
+      <div class="review-content flex justify-center mt-16">
+        <img src="../public/images/review.svg" alt="Review" class="w-full h-auto max-w-md" />
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="quote bg-white shadow-md rounded-lg p-4">
+    <div class="quote-content flex justify-center">
+      <img src="../public/images/quote.svg" alt="Quote" class="w-full h-auto max-w-2xl" />
+    </div>
+  </section> -->
+
+
+  <!-- Footer -->
+  <footer-element></footer-element>
 
   <script type="text/javascript" src="./dist/app.bundle.js"></script>
 </body>
