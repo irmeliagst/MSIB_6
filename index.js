@@ -3,8 +3,8 @@ import '../styles/main.css';
 import '../styles/map.css';
 import '../styles/detail.css';
 import '../styles/output.css';
-import '../scripts/map';
-import './component/main';
+import '../scripts/map.js';
+import '/component/main.js';
 
 // document.addEventListener("DOMContentLoaded", async () => {
 //   const jsonData = await import('../DATA.json');
@@ -60,5 +60,4 @@ let jsArrow = document.querySelector(".js-arrow");
 jsArrow.onclick = function() {
  navLinks.classList.toggle("show3");
 }
-
 

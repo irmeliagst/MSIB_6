@@ -4,54 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jember Tourism</title>
-    <link rel="stylesheet" href="./src/styles/detail.css" />
+    <link rel="stylesheet" href="/styles/detail.css" />
   </head>
   <body>
     <div class="detail-container">
       <section class="row-wrap">
         <div class="detail-content">
           <img
-            src="public/images/KebunTehGunungGambir.jpg"
+            src="/public/images/watuulo.jpg"
             alt="gmbir"
             width="400px"
           />
-          <h2>Kebun Teh Gambir</h2>
+          <h2>Pantai Watu Ulo</h2>
 
           <p>
-            Selamat datang di Destinasi Wisata Tanah Lot, sebuah tempat yang
-            memukau dengan keindahan alamnya yang memesona dan warisan budayanya
-            yang kaya. Dengan pemandangan alam yang menakjubkan dan beragam
-            aktivitas seru, Tanah Lot adalah destinasi impian bagi para pecinta
-            alam dan pencari petualangan. Jelajahi keindahan alam yang
-            menakjubkan, nikmati kuliner lokal yang lezat, dan rasakan
-            kehangatan keramahan penduduknya.Note: ini nanti rata kanan kiri ya
+            Pantai ini berada di gugusan Samudera Indonesia dengan panorama alam yang indah. Menariknya di Pantai ini terdapat sebuah batu panjang yang berbentuk seperti ular (Jw.Ulo) yang penuh dengan sisik. Menurut cerita rakyat pada jaman dahulu kala ada seekor Ular yang sedang bertapa di pantai itu. Setelah permohonannnya dikabulkan oleh Yang Maha Kuasa maka wujudnya berubah menjadi batu dengan bagian kepala menjulur ke laut dan badan berada di daratan. Tempat ini juga memiliki nilai sejarah karena pada jaman dulu dijadikan sebagai benteng pertahanan serdadu tentara Jepang. Ada lima buah benteng pertahanan yang dibangun sehinggga masyarakat setempat menyebutnya Goa Jepang. Tidak kalah menariknya di samping Goa Jepang terdapat Goa Lawa (Goa Kalelawar) yang dihuni ratusan ribu Kalelawar.Pengunjung bisa melihat dengan melewati dan menyusuri pantai berpasir.Goa ini mempunyai kedalaman 100 meter yang biasanya dijadikan sebagai tempat bermeditasi karena letaknya yang jauh dari keramaian. Pada saat saat tertentu seperti menjelang Tahun Baru masehi dan Hari Raya Idul Fitri digelar event event special seperti Lomba Layang Layang Pantai dan panggung hiburan rakyat. Dan yang tak kalah menarik setiap Tahun Baru Hijriyah diadakan Festival Pegon, Pegon adalah kendaraan angkut tradisional dengan tenaga sapi serta tasyakuran sebagai wujud terimakasih atas semua rizki yang telah diterima di sepanjang tahun dan harapan untuk tetap diberikan kemudahan dan limpahan rahmat dari Yang Maha Kuasa.
           </p>
         </div>
 
         <div class="review-content">
           <div class="col">
-            <img src="public/images/profile.png" alt="profile" />
+            <img src="/public/images/profile.png" alt="profile" />
             <h3>Luthfi</h3>
             <div class="star-flex">
-              <img src="public/images/five-star.png" alt="fivestar" />
+              <img src="/public/images/five-star.png" alt="fivestar" />
             </div>
-            <p>Mantab</p>
+            <p>Keren Pantainya</p>
           </div>
           <div class="col">
-            <img src="public/images/profile.png" alt="profile" />
+            <img src="/public/images/profile.png" alt="profile" />
             <h3>Ira Amelia</h3>
             <div class="star-flex">
-              <img src="public/images/five-star.png" alt="fivestar" />
+              <img src="/public/images/five-star.png" alt="fivestar" />
             </div>
-            <p>Joss</p>
+            <p>sejuknyaaaaa</p>
         </div>
         <div class="col">
-          <img src="public/images/profile.png" alt="profile" />
+          <img src="/public/images/profile.png" alt="profile" />
           <h3>Farhan</h3>
           <div class="star-flex">
-            <img src="public/images/three-star.png" alt="fivestar" />
+            <img src="/public/images/three-star.png" alt="fivestar" />
           </div>
-          <p>Aduhhh</p>
+          <p>Nyaman banget disini</p>
         </div>
       </section>
 
@@ -63,7 +57,7 @@
             id="comment"
             required
           />
-          <button id="submitBtn">btn</button>
+          <button id="submitBtn">Send</button>
         </div>
         <div class="star-rating" id="starRating">
           <span class="star" data-value="5">&#9733;</span>
@@ -98,23 +92,23 @@
       
             switch (selectedStar) {
               case "5":
-                starImg.src = "public/images/five-star.png";
+                starImg.src = "/public/images/five-star.png";
                 starImg.alt = "five-star";
                 break;
               case "4":
-                starImg.src = "public/images/four-star.png";
+                starImg.src = "/public/images/four-star.png";
                 starImg.alt = "four-star";
                 break;
               case "3":
-                starImg.src = "public/images/three-star.png";
+                starImg.src = "/public/images/three-star.png";
                 starImg.alt = "three-star";
                 break;
               case "2":
-                starImg.src = "public/images/two-star.png";
+                starImg.src = "/public/images/two-star.png";
                 starImg.alt = "two-star";
                 break;
               case "1":
-                starImg.src = "public/images/one-star.png";
+                starImg.src = "/public/images/one-star.png";
                 starImg.alt = "one-star";
                 break;
               default:
@@ -154,7 +148,7 @@
             newCol.classList.add("col");
       
             const profileImg = document.createElement("img");
-            profileImg.src = "public/images/profile.png";
+            profileImg.src = "/public/images/profile.png";
             profileImg.alt = "profile";
       
             const nameHeader = document.createElement("h3");
@@ -169,23 +163,23 @@
       
             switch (selectedStar) {
               case "5":
-                starImg.src = "public/images/five-star.png";
+                starImg.src = "/public/images/five-star.png";
                 starImg.alt = "five-star";
                 break;
               case "4":
-                starImg.src = "public/images/four-star.png";
+                starImg.src = "/public/images/four-star.png";
                 starImg.alt = "four-star";
                 break;
               case "3":
-                starImg.src = "public/images/three-star.png";
+                starImg.src = "/public/images/three-star.png";
                 starImg.alt = "three-star";
                 break;
               case "2":
-                starImg.src = "public/images/two-star.png";
+                starImg.src = "/public/images/two-star.png";
                 starImg.alt = "two-star";
                 break;
               case "1":
-                starImg.src = "public/images/one-star.png";
+                starImg.src = "/public/images/one-star.png";
                 starImg.alt = "one-star";
                 break;
               default:

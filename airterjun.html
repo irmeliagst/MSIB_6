@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jember Tourism</title>
+    <link rel="stylesheet" href="/styles/detail.css" />
+  </head>
+  <body>
+    <div class="detail-container">
+      <section class="row-wrap">
+        <div class="detail-content">
+          <img
+            src="/public/images/airterjun.jpg"
+            alt="gmbir"
+            width="400px"
+          />
+          <h2>Air Terjun Tancak</h2>
+
+          <p>
+            lokasi air terjun yang berada di sisi selatan Gunung Argopuro, tepatnya di Desa Suci, Kecamatan Panti, Kabupaten Jember, Jawa Timur. Dari pusat Kota Jember menempuh jarak 16 km menuju Desa Suci. Air terjun Tancak merupakan air terjun yang memiliki aliran deras dengan ketinggian 82 meter dan debit air 150 meter kubik perdetik.
+            <br>
+            Air Terjun Tancak dibuka seharian atau 24 jam. Tiket masuk hanya membayar Rp 2.000 untuk motor dan Rp 5.000 untuk mobil. Sebelum sampai di lokasi air terjun kendaraan harus parkir di suatu tempat kemudian melanjutkan perjalanan dengan berjalan kaki. Jarak dari lokasi parkir hingga Air Terjun Tancak kurang lebih sejauh 3 km dengan waktu tempuh sekitar 1 jam. Dalam perjalanannya akan melewati area perkebunan kopi, jalanan berbatu, hutan, serta sungai-sungai dengan air yang menyegarkan. Di sekitar air terjun tancak akan disuguhi pemandangan tebing tinggi yang ditumbuhi tanaman semak belukar yang masih alami. Percikan air yang terjun bebas dari tebing, memberi rasa segar dan sejuk. Air Terjun Tancak sangatlah jernih, dingin, dan menyegarkan.
+            </br>
+          </p>
+        </div>
+
+        <div class="review-content">
+          <div class="col">
+            <img src="/public/images/profile.png" alt="profile" />
+            <h3>Luthfi</h3>
+            <div class="star-flex">
+              <img src="/public/images/five-star.png" alt="fivestar" />
+            </div>
+            <p>Mantab</p>
+          </div>
+          <div class="col">
+            <img src="/public/images/profile.png" alt="profile" />
+            <h3>Ira Amelia</h3>
+            <div class="star-flex">
+              <img src="/public/images/five-star.png" alt="fivestar" />
+            </div>
+            <p>Joss</p>
+        </div>
+        <div class="col">
+          <img src="/public/images/profile.png" alt="profile" />
+          <h3>Farhan</h3>
+          <div class="star-flex">
+            <img src="/public/images/three-star.png" alt="fivestar" />
+          </div>
+          <p>Aduhhh</p>
+        </div>
+      </section>
+
+      <section class="add-comment">
+        <div class="comment-content">
+          <input
+            type="text"
+            placeholder="Masukkan Komentar"
+            id="comment"
+            required
+          />
+          <button id="submitBtn">Send</button>
+        </div>
+        <div class="star-rating" id="starRating">
+          <span class="star" data-value="5">&#9733;</span>
+          <span class="star" data-value="4">&#9733;</span>
+          <span class="star" data-value="3">&#9733;</span>
+          <span class="star" data-value="2">&#9733;</span>
+          <span class="star" data-value="1">&#9733;</span>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const stars = document.querySelectorAll(".star");
+        const starRating = document.getElementById("starRating");
+        let selectedStar = null;
+      
+        stars.forEach((star) => {
+          star.addEventListener("click", () => {
+            // Set selectedStar to the clicked star's data value
+            selectedStar = star.getAttribute("data-value");
+      
+            // Clear any existing star images
+            const existingStarImg = starRating.querySelector(".star-img");
+            if (existingStarImg) {
+              existingStarImg.remove();
+            }
+      
+            // Create new elements for the corresponding star image
+            const starImg = document.createElement("img");
+            starImg.classList.add("star-img");
+      
+            switch (selectedStar) {
+              case "5":
+                starImg.src = "/public/images/five-star.png";
+                starImg.alt = "five-star";
+                break;
+              case "4":
+                starImg.src = "/public/images/four-star.png";
+                starImg.alt = "four-star";
+                break;
+              case "3":
+                starImg.src = "/public/images/three-star.png";
+                starImg.alt = "three-star";
+                break;
+              case "2":
+                starImg.src = "/public/images/two-star.png";
+                starImg.alt = "two-star";
+                break;
+              case "1":
+                starImg.src = "/public/images/one-star.png";
+                starImg.alt = "one-star";
+                break;
+              default:
+                break;
+            }
+      
+            // Append the new star image to the starRating element
+            starRating.appendChild(starImg);
+          });
+        });
+      
+        // Function to clear star selection
+        function clearSelection() {
+          stars.forEach((star) => {
+            const existingStarImg = star.querySelector(".star-img");
+            if (existingStarImg) {
+              existingStarImg.remove();
+            }
+          });
+          selectedStar = null;
+        }
+      
+        // Example submit button event listener (you can integrate this with your existing code)
+        const submitBtn = document.getElementById("submitBtn");
+        submitBtn.addEventListener("click", (event) => {
+          event.preventDefault(); // Prevent form submission for this example
+      
+          // Perform your validation and submission logic here
+          const comment = document.getElementById("comment").value;
+          if (!selectedStar) {
+            alert("Silakan pilih rating bintang.");
+          } else if (!comment) {
+            alert("Silakan masukkan komentar.");
+          } else {
+            // Create new elements for the comment
+            const newCol = document.createElement("div");
+            newCol.classList.add("col");
+      
+            const profileImg = document.createElement("img");
+            profileImg.src = "/public/images/profile.png";
+            profileImg.alt = "profile";
+      
+            const nameHeader = document.createElement("h3");
+            nameHeader.textContent = "Anonymous"; // Ganti dengan nama yang sesuai
+      
+            const newstarFlex = document.createElement("div");
+            newstarFlex.classList.add("star-flex");
+      
+            // Create new elements for the selected star image
+            const starImg = document.createElement("img");
+            starImg.classList.add("star-img");
+      
+            switch (selectedStar) {
+              case "5":
+                starImg.src = "/public/images/five-star.png";
+                starImg.alt = "five-star";
+                break;
+              case "4":
+                starImg.src = "/public/images/four-star.png";
+                starImg.alt = "four-star";
+                break;
+              case "3":
+                starImg.src = "/public/images/three-star.png";
+                starImg.alt = "three-star";
+                break;
+              case "2":
+                starImg.src = "/public/images/two-star.png";
+                starImg.alt = "two-star";
+                break;
+              case "1":
+                starImg.src = "/public/images/one-star.png";
+                starImg.alt = "one-star";
+                break;
+              default:
+                break;
+            }
+      
+            // Append the star image to newstarFlex
+            newstarFlex.appendChild(starImg);
+      
+            const commentPara = document.createElement("p");
+            commentPara.textContent = comment;
+      
+            newCol.appendChild(profileImg);
+            newCol.appendChild(nameHeader);
+            newCol.appendChild(newstarFlex);
+            newCol.appendChild(commentPara);
+      
+            // Add the new comment to review-content
+            const reviewContent = document.querySelector(".review-content");
+            reviewContent.appendChild(newCol);
+      
+            // Reset selected star and input
+            clearSelection();
+            document.getElementById("comment").value = "";
+      
+            alert("Komentar dan rating berhasil dikirim!");
+            // Here you can add code to submit the form
+          }
+        });
+      });
+      
+      
+
+    </script>
+  </body>
+</html>
