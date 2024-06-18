@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JemberTourism</title>
+    <link rel="icon" href="public/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/styles/detail.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="navbar">
+          <i class="bx bx-menu"></i>
+          <div class="logo">
+            <img src="public/images/logo.svg" width="300px" alt="" />
+          </div>
+          <div class="nav-links">
+            <div class="sidebar-logo">
+              <span class="logo-name"> <img src="public/images/logo.svg" width="100px" alt="" /></span>
+              <i class="bx bx-x"></i>
+            </div>
+            <ul class="links">
+              <li><a href="index.html">Home</a></li>
+              <li>
+                <a href="index.html">Features</a>
+              </li>
+              <li>
+                <a href="">About Us</a>
+                <i class="bx bxs-chevron-down js-arrow arrow"></i>
+                <ul class="js-sub-menu sub-menu">
+                  <li><a href="https://www.linkedin.com/in/luthfi-taufiqulhakim/">Luthfi</a></li>
+                  <li><a href="https://www.linkedin.com/in/farhan-ansyah-182491284/">Farhan</a></li>
+                  <li><a href="https://www.instagram.com/_irmeliagst?igsh=Y3ZyZTk5eW1sYTE2">Ira</a></li>
+                </ul>
+              </li>
+              <li><a href="index.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="detail-container">
+      <section class="row-wrap">
+        <div class="detail-content">
+          <img
+            src="/public/images/pantaipapuma.jpg"
+            alt="gmbir"
+            width="400px"
+          />
+          <h2>Pantai Papuma</h2>
+
+          <p>
+            Pantai papuma berada di Desa Lojejer, Kecamatan Wuluhan, Kabupaten Jember. Pantai papuma adalah salah satu pantai yang cukup populer dan terkenal di Jember. Walaupun jarak sekitar 40 kilometer cukup jauh dari pusat kota Jember. Namun, keindahan pasir putih Malikan ini cukup eksotis dan mampu menarik perhatian wisatawan lokal hingga mancanegara untuk datang kesana.
+          </p>
+        </div>
+
+        <div class="review-content">
+          
+        <div class="col">
+          <img src="/public/images/profile.png" alt="profile" />
+          <h3>Farhan</h3>
+          <div class="star-flex">
+            <img src="/public/images/three-star.png" alt="fivestar" />
+          </div>
+          <p>Kerennnnnn</p>
+        </div>
+      </section>
+
+      <section class="add-comment">
+        <div class="comment-content">
+          <input
+            type="text"
+            placeholder="Masukkan Komentar"
+            id="comment"
+            required
+          />
+          <button id="submitBtn">Send</button>
+        </div>
+        <div class="star-rating" id="starRating">
+          <span class="star" data-value="5">&#9733;</span>
+          <span class="star" data-value="4">&#9733;</span>
+          <span class="star" data-value="3">&#9733;</span>
+          <span class="star" data-value="2">&#9733;</span>
+          <span class="star" data-value="1">&#9733;</span>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      let navbar = document.querySelector(".navbar");
+
+      // sidebar open close js code
+      let navLinks = document.querySelector(".nav-links");
+      let menuOpenBtn = document.querySelector(".navbar .bx-menu");
+      let menuCloseBtn = document.querySelector(".nav-links .bx-x");
+      menuOpenBtn.onclick = function () {
+        navLinks.style.left = "0";
+      }
+      menuCloseBtn.onclick = function () {
+        navLinks.style.left = "-100%";
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const stars = document.querySelectorAll(".star");
+        const starRating = document.getElementById("starRating");
+        let selectedStar = null;
+      
+        stars.forEach((star) => {
+          star.addEventListener("click", () => {
+            // Set selectedStar to the clicked star's data value
+            selectedStar = star.getAttribute("data-value");
+      
+            // Clear any existing star images
+            const existingStarImg = starRating.querySelector(".star-img");
+            if (existingStarImg) {
+              existingStarImg.remove();
+            }
+      
+            // Create new elements for the corresponding star image
+            const starImg = document.createElement("img");
+            starImg.classList.add("star-img");
+      
+            switch (selectedStar) {
+              case "5":
+                starImg.src = "/public/images/five-star.png";
+                starImg.alt = "five-star";
+                break;
+              case "4":
+                starImg.src = "/public/images/four-star.png";
+                starImg.alt = "four-star";
+                break;
+              case "3":
+                starImg.src = "/public/images/three-star.png";
+                starImg.alt = "three-star";
+                break;
+              case "2":
+                starImg.src = "/public/images/two-star.png";
+                starImg.alt = "two-star";
+                break;
+              case "1":
+                starImg.src = "/public/images/one-star.png";
+                starImg.alt = "one-star";
+                break;
+              default:
+                break;
+            }
+      
+            // Append the new star image to the starRating element
+            starRating.appendChild(starImg);
+          });
+        });
+      
+        // Function to clear star selection
+        function clearSelection() {
+          stars.forEach((star) => {
+            const existingStarImg = star.querySelector(".star-img");
+            if (existingStarImg) {
+              existingStarImg.remove();
+            }
+          });
+          selectedStar = null;
+        }
+      
+        // Example submit button event listener (you can integrate this with your existing code)
+        const submitBtn = document.getElementById("submitBtn");
+        submitBtn.addEventListener("click", (event) => {
+          event.preventDefault(); // Prevent form submission for this example
+      
+          // Perform your validation and submission logic here
+          const comment = document.getElementById("comment").value;
+          if (!selectedStar) {
+            alert("Silakan pilih rating bintang.");
+          } else if (!comment) {
+            alert("Silakan masukkan komentar.");
+          } else {
+            // Create new elements for the comment
+            const newCol = document.createElement("div");
+            newCol.classList.add("col");
+      
+            const profileImg = document.createElement("img");
+            profileImg.src = "/public/images/profile.png";
+            profileImg.alt = "profile";
+      
+            const nameHeader = document.createElement("h3");
+            nameHeader.textContent = "Anonymous"; // Ganti dengan nama yang sesuai
+      
+            const newstarFlex = document.createElement("div");
+            newstarFlex.classList.add("star-flex");
+      
+            // Create new elements for the selected star image
+            const starImg = document.createElement("img");
+            starImg.classList.add("star-img");
+      
+            switch (selectedStar) {
+              case "5":
+                starImg.src = "/public/images/five-star.png";
+                starImg.alt = "five-star";
+                break;
+              case "4":
+                starImg.src = "/public/images/four-star.png";
+                starImg.alt = "four-star";
+                break;
+              case "3":
+                starImg.src = "/public/images/three-star.png";
+                starImg.alt = "three-star";
+                break;
+              case "2":
+                starImg.src = "/public/images/two-star.png";
+                starImg.alt = "two-star";
+                break;
+              case "1":
+                starImg.src = "/public/images/one-star.png";
+                starImg.alt = "one-star";
+                break;
+              default:
+                break;
+            }
+      
+            // Append the star image to newstarFlex
+            newstarFlex.appendChild(starImg);
+      
+            const commentPara = document.createElement("p");
+            commentPara.textContent = comment;
+      
+            newCol.appendChild(profileImg);
+            newCol.appendChild(nameHeader);
+            newCol.appendChild(newstarFlex);
+            newCol.appendChild(commentPara);
+      
+            // Add the new comment to review-content
+            const reviewContent = document.querySelector(".review-content");
+            reviewContent.appendChild(newCol);
+      
+            // Reset selected star and input
+            clearSelection();
+            document.getElementById("comment").value = "";
+      
+            alert("Komentar dan rating berhasil dikirim!");
+            // Here you can add code to submit the form
+          }
+        });
+      });
+      
+      
+
+    </script>
+  </body>
+</html>
