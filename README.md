@@ -63,3 +63,4 @@ For any inquiries or suggestions, feel free to contact us:
 
 - **Email:** luthfit64@gmail.com
 - **Email:** muhammadfarhan8743@gmail.com
+- **Email:** ameliaagasta2002@gmail.com
